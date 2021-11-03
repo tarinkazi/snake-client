@@ -27,6 +27,18 @@ const connect = function () {
   conn.setEncoding("utf8");
   conn.write(`${name} has connected!!!`);
  
+
+  const handleUserInput = function (data) {
+    // your code here
+    if(data === 'w'){
+      conn.write("Bye");
+      process.exit();
+    }
+  };
+  
+  
+
+
  
   return conn;
 

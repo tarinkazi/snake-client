@@ -5,17 +5,17 @@ const connect = require("./client");
 
 const conn = connect();
 
+// const stdin = process.stdin;
 
-  // interpret incoming data as text
-  // const name = "tarin";
-  // conn.setEncoding("utf8");
-  // conn.write(`${name} has connected!!!`);
-const stdin = process.stdin;
+//   stdin.on('data', (input) => {
+//     conn.write(`${name}: ${input}`);
+//   })
 
-  stdin.on('data', (input) => {
-    conn.write(`${name}: ${input}`);
-  })
-
-  // return conn;
-//};
-
+const setupInput = function () {
+  const stdin = process.stdin;
+  stdin.setRawMode(true);
+  stdin.setEncoding("utf8");
+  stdin.resume();
+  stdin.on("data", handleUserInput);
+  return stdin;
+};
