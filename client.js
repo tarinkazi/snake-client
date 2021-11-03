@@ -15,6 +15,15 @@ const connect = function () {
 
     const name = "tar";
     conn.write('Name: Tar');
+
+    //move operation
+    // number = [1, 2, 3,4,5];
+    // for(let i of number){
+    //   setTimeout(() => {
+    //     conn.write("Move : Up");
+    //   }, i += 500);
+    // }
+    conn.write("Move : Up");
   conn.setEncoding("utf8");
   conn.write(`${name} has connected!!!`);
  
