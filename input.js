@@ -8,11 +8,11 @@ const handleUserInput = function(data) {
   } else if (data === 'w'){
     connection.write('Move: Up')
   } else if (data === 'a'){
-    connection.write('Move: Left')
+    connection.write('Move: lest')
   } else if (data === 's'){
-    connection.write('Move: Down')
+    connection.write('Move: down')
   } else if (data === 'd'){
-    connection.write('Move: Right')
+    connection.write('Move: right')
   }
 }
 
