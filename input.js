@@ -13,7 +13,8 @@ const handleUserInput = function(data) {
     connection.write('Move: down')
   } else if (data === 'd'){
     connection.write('Move: right')
-  }
+  } else if (data === 'p'){
+    connection.write('Yeah!!!!done it')
 }
 
 const setupInput = function (conn) {
