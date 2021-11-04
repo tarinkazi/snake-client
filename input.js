@@ -16,6 +16,7 @@ const handleUserInput = function(data) {
   } else if (data === 'p'){
     connection.write('Yeah!!!!done it')
 }
+}
 
 const setupInput = function (conn) {
   connection = conn;
